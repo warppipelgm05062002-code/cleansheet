@@ -1,0 +1,35 @@
+CleanSheet - CSV & Excel Cleanup Tool
+Copyright (c) 2026 Le James
+
+GRANT
+
+You may use, copy, and modify this software for personal use and for internal
+business use on any number of machines that you own or control. You may use it
+to process data for clients as part of your own services.
+
+RESTRICTIONS
+
+You may not redistribute, publish, sell, sublicense, rent, or lend the source
+code or the packaged archive, in whole or in part, as a product or as part of a
+product, whether modified or unmodified.
+
+You may not remove this license notice from copies you keep.
+
+NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+LIMITATION
+
+This tool rewrites data files. Always keep the original input file and check
+the generated report before relying on cleaned output for business decisions.
+
+CONTACT
+
+Purchases are handled by the marketplace that delivered this archive. Use that
+marketplace's refund window and support channel.

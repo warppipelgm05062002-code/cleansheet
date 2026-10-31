@@ -1,0 +1,6 @@
+Order ID , Customer Name ,Email,Order Date,Amount,Country
+ 1001 ,  Le   James , le@example.com ,05/06/2026,"$1,234.50", Vietnam
+1002,Anna Tran,anna.tran@example.com,2026-06-07,"1 000.00",Vietnam
+1002,Anna Tran,anna.tran@example.com,2026-06-07,"1 000.00",Vietnam
+1003,Bob Nguyen,bob@@example.com,not a date,$99.00,
+1004,Chi Le,chi.le@example.com,12/13/2026,$50, Hanoi

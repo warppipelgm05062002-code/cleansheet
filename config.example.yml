@@ -1,0 +1,64 @@
+# CleanSheet example config.
+# Paths are relative to the folder you run the command from.
+# Every key is optional. Rules run in a fixed order (see README.md).
+
+input: sample_input/orders.csv
+output: sample_output/orders_clean.csv
+encoding: utf-8-sig
+
+# --- basic cleanup -----------------------------------------------------------
+trim: true
+collapse_whitespace: true
+normalize_headers: true
+drop_empty_rows: true
+drop_empty_columns: true
+drop_duplicates: true
+# dedupe_keys: [order_id]     # dedupe on these columns instead of the whole row
+
+# --- dates -------------------------------------------------------------------
+# Formats are tried in order. Put day-first before month-first for ambiguous
+# values such as 05/06/2026.
+dates:
+  - column: order_date
+    formats:
+      - "%d/%m/%Y"
+      - "%Y-%m-%d"
+      - "%d/%m/%Y %H:%M:%S"
+
+# --- numbers -----------------------------------------------------------------
+# remove_chars are deleted before parsing; decimal is the decimal separator.
+# For European files ("1.234,56") use remove_chars: "€. " and decimal: ","
+numbers:
+  - column: amount
+    remove_chars: "$€£₫, "
+    decimal: "."
+
+# --- rows --------------------------------------------------------------------
+required:
+  - email
+
+# --- blanks ------------------------------------------------------------------
+fill:
+  country: Unknown
+
+# --- split one column into several -------------------------------------------
+split:
+  - column: customer_name
+    delimiter: " "
+    into:
+      - first_name
+      - last_name
+    keep_original: false
+
+# --- validation (report only; values are never deleted) ----------------------
+validate:
+  email:
+    - email
+  # phone:
+  #   - phone
+  # url:
+  #   - website
+phone_min_digits: 7
+
+# Turn off heuristic date/number detection for columns you did not list above.
+auto_detect: true
